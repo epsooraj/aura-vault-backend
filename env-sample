@@ -1,0 +1,20 @@
+# Copy this file to ".env" and fill in real values for your environment.
+
+# Django
+SECRET_KEY=change_me_to_a_secure_random_value
+DEBUG=True
+
+# PostgreSQL
+POSTGRES_DB=auravault
+POSTGRES_USER=auravault
+POSTGRES_PASSWORD=your_db_password
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+
+# AWS S3 (for django-storages)
+AWS_ACCESS_KEY_ID=your_aws_access_key_id
+AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
+AWS_STORAGE_BUCKET_NAME=your_s3_bucket_name
+AWS_S3_REGION_NAME=us-east-1
+
+

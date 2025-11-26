@@ -1,0 +1,30 @@
+services:
+
+  db:
+    image: postgres:16
+    restart: always
+    volumes:
+      - postgres_data_auravault:/var/lib/postgresql/data/
+      - ..:/usr/src/app
+    environment:
+      - POSTGRES_USER=auravault_user
+      - POSTGRES_PASSWORD=auravault_pass
+      - POSTGRES_DB=auravault_db
+    ports:
+      - '5432:5432'
+
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning
+    volumes:
+      - redis_data_auravault:/data
+      - ..:/usr/src/app
+
+volumes:
+  postgres_data_auravault:
+  redis_data_auravault:
+    driver: local
+  qdrant_storage_auravault:
