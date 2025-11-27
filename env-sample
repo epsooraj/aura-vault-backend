@@ -3,6 +3,8 @@
 # Django
 SECRET_KEY=change_me_to_a_secure_random_value
 DEBUG=True
+# Comma-separated list of allowed hosts, e.g. "localhost,127.0.0.1,.example.com"
+ALLOWED_HOSTS=localhost,127.0.0.1
 
 # PostgreSQL
 POSTGRES_DB=auravault
